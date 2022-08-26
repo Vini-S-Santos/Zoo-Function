@@ -17,7 +17,7 @@ function countEntrants(entrants) {
 }
 
 function calculateEntry(entrants) {
-  if (entrants === undefined || !entrants.length) { // retorna 0 se nenhum argumento for passado , retorna 0 se um objeto vazio for passado
+  if (entrants === undefined || !entrants.length) { // retorna 0 se nenhum argumento for passado , retorna 0 se um objeto vazio for passado,
     return 0;
   }
   const total = countEntrants(entrants);
