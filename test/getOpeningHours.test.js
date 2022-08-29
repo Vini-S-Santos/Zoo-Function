@@ -34,15 +34,15 @@ describe('Testes da função getOpeningHours', () => {
     expect(() => getOpeningHours('Friday', '09:00-PA')).toThrowError('The abbreviation must be \'AM\' or \'PM\'');
   });
 
-  it('Testa se passar letra ao invez de hora', () => {
+  it('Testa se passar letra ao invés de hora', () => {
     expect(() => getOpeningHours('Saturday', 'A:00-AM')).toThrowError('The hour should represent a number');
   });
 
-  it('Testa se passar letra ao invez de minuto', () => {
+  it('Testa se passar letra ao invés de minuto', () => {
     expect(() => getOpeningHours('Sunday', '08:AA-AM')).toThrowError('The minutes should represent a number');
   });
 
-  it('Testa se passar 15:00', () => {
+  it('Testa se passar formato de 24:00', () => {
     expect(() => getOpeningHours('Monday', '15:00-AM')).toThrowError('The hour must be between 0 and 12');
   });
 

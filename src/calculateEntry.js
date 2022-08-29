@@ -21,10 +21,8 @@ function calculateEntry(entrants) {
     return 0;
   }
   const total = countEntrants(entrants);
-  const child = data.prices.child * total.child;
-  const adult = data.prices.adult * total.adult;
-  const senior = data.prices.senior * total.senior;
-  const totalPrice = child + adult + senior;
+  const totalPrice = data.prices.child * total.child + data.prices.adult * total.adult
+  + data.prices.senior * total.senior;
   return totalPrice;
 }
 

@@ -8,8 +8,8 @@ function countAnimals(animal) {
   if (animal) {
     return data.species.find((type) => type.name === animal.specie).residents.length;
   }
-  return data.species.reduce((acc, type) => {
-    acc[type.name] = type.residents.length;
+  return data.species.reduce((acc, curr) => {
+    acc[curr.name] = curr.residents.length;
     return acc;
   }, {});
 }
